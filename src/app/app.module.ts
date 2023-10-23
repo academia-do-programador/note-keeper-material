@@ -7,6 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { CoreModule } from './core/core.module';
+import { DashboardModule } from './views/dashboard/dashboard.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,6 +19,9 @@ import { MatCardModule } from '@angular/material/card';
 
     MatButtonModule,
     MatCardModule,
+
+    CoreModule,
+    DashboardModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
