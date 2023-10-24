@@ -5,7 +5,7 @@ import { MatCard, MatCardModule } from '@angular/material/card';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { MatList, MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
-
+import { MatTooltipModule } from '@angular/material/tooltip';
 @NgModule({
   declarations: [CardHoverDirective],
   imports: [
@@ -14,6 +14,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatButtonModule,
     MatIconModule,
     MatListModule,
+    MatTooltipModule,
   ],
   exports: [
     CardHoverDirective,
@@ -21,6 +22,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatButtonModule,
     MatIconModule,
     MatListModule,
+    MatTooltipModule,
   ],
 })
 export class SharedModule {}

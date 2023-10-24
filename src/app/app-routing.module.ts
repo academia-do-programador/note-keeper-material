@@ -7,6 +7,14 @@ const routes: Routes = [
     redirectTo: 'dashboard',
     pathMatch: 'full',
   },
+
+  {
+    path: 'categorias',
+    loadChildren: () =>
+      import('./views/categorias/categorias.module').then(
+        (m) => m.CategoriasModule
+      ),
+  },
 ];
 
 @NgModule({
