@@ -16,10 +16,6 @@ import { DashboardModule } from './views/dashboard/dashboard.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-
-    MatButtonModule,
-    MatCardModule,
-
     CoreModule,
     DashboardModule,
   ],
