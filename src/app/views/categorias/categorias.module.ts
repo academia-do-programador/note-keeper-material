@@ -7,9 +7,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { CategoriasService } from './services/categorias.service';
 import { InserirCategoriaComponent } from './inserir-categoria/inserir-categoria.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EditarCategoriaComponent } from './editar-categoria/editar-categoria.component';
 
 @NgModule({
-  declarations: [ListarCategoriasComponent, InserirCategoriaComponent],
+  declarations: [ListarCategoriasComponent, InserirCategoriaComponent, EditarCategoriaComponent],
   imports: [
     CommonModule,
     CategoriasRoutingModule,
