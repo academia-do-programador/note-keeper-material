@@ -1,12 +1,19 @@
 import { NgModule, inject } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { ActivatedRouteSnapshot, RouterModule, Routes } from '@angular/router';
 import { ListarNotasComponent } from './listar-notas/listar-notas.component';
 import { NotasService } from './services/notas.service';
 import { InserirNotaComponent } from './inserir-nota/inserir-nota.component';
 import { listarCategoriasResolver } from '../categorias/services/listar-categorias.resolver';
+import { EditarNotaComponent } from './editar-nota/editar-nota.component';
 
 const listarNotasResolver = () => {
   return inject(NotasService).selecionarTodos();
+};
+
+const formsNotaResolver = (route: ActivatedRouteSnapshot) => {
+  const id = parseInt(route.paramMap.get('id')!);
+
+  return inject(NotasService).selecionarPorId(id);
 };
 
 const routes: Routes = [
@@ -25,11 +32,11 @@ const routes: Routes = [
     component: InserirNotaComponent,
     resolve: { categorias: listarCategoriasResolver },
   },
-  // {
-  //   path: 'editar/:id',
-  //   component: EditarCategoriaComponent,
-  //   resolve: { categoria: formsCategoriaResolver },
-  // },
+  {
+    path: 'editar/:id',
+    component: EditarNotaComponent,
+    resolve: { nota: formsNotaResolver, categorias: listarCategoriasResolver },
+  },
   // {
   //   path: 'excluir/:id',
   //   component: ExcluirCategoriaComponent,

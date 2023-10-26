@@ -11,9 +11,10 @@ import { InserirNotaComponent } from './inserir-nota/inserir-nota.component';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { CategoriasModule } from '../categorias/categorias.module';
+import { EditarNotaComponent } from './editar-nota/editar-nota.component';
 
 @NgModule({
-  declarations: [ListarNotasComponent, InserirNotaComponent],
+  declarations: [ListarNotasComponent, InserirNotaComponent, EditarNotaComponent],
   imports: [
     NotasRoutingModule,
     SharedModule,
