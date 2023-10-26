@@ -12,9 +12,10 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { CategoriasModule } from '../categorias/categorias.module';
 import { EditarNotaComponent } from './editar-nota/editar-nota.component';
+import { ExcluirNotaComponent } from './excluir-nota/excluir-nota.component';
 
 @NgModule({
-  declarations: [ListarNotasComponent, InserirNotaComponent, EditarNotaComponent],
+  declarations: [ListarNotasComponent, InserirNotaComponent, EditarNotaComponent, ExcluirNotaComponent],
   imports: [
     NotasRoutingModule,
     SharedModule,

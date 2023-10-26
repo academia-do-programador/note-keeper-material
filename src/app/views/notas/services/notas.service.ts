@@ -22,12 +22,11 @@ export class NotasService {
 
   excluir(id: number): Observable<any> {
     const url = `${this.NOTAS_API_URL}/${id}`;
-
-    return this.http.delete<Nota>(url);
+    return this.http.delete<any>(url);
   }
 
   selecionarPorId(id: number): Observable<Nota> {
-    const url = `${this.NOTAS_API_URL}/${id}`;
+    const url = `${this.NOTAS_API_URL}/${id}?_expand=categoria`;
 
     return this.http.get<Nota>(url);
   }
