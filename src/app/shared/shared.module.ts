@@ -10,17 +10,9 @@ import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [CardHoverDirective],
-  imports: [
-    CommonModule,
-    MatCardModule,
-    MatButtonModule,
-    MatIconModule,
-    MatListModule,
-    MatTooltipModule,
-    MatInputModule,
-  ],
   exports: [
     CardHoverDirective,
+    
     MatCardModule,
     MatButtonModule,
     MatIconModule,
