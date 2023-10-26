@@ -11,13 +11,13 @@ import { EditarCategoriaComponent } from './editar-categoria/editar-categoria.co
 import { ExcluirCategoriaComponent } from './excluir-categoria/excluir-categoria.component';
 
 @NgModule({
-  declarations: [ListarCategoriasComponent, InserirCategoriaComponent, EditarCategoriaComponent, ExcluirCategoriaComponent],
-  imports: [
-    CommonModule,
-    CategoriasRoutingModule,
-    SharedModule,
-    ReactiveFormsModule,
+  declarations: [
+    ListarCategoriasComponent,
+    InserirCategoriaComponent,
+    EditarCategoriaComponent,
+    ExcluirCategoriaComponent,
   ],
+  imports: [CategoriasRoutingModule, SharedModule],
   providers: [CategoriasService],
 })
 export class CategoriasModule {}
