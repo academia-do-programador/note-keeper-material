@@ -7,10 +7,11 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [ShellComponent],
-  imports: [CommonModule, SharedModule, MatToolbarModule, MatSidenavModule],
+  imports: [CommonModule, SharedModule, MatToolbarModule, MatSidenavModule, RouterModule],
   exports: [ShellComponent],
 })
 export class ShellModule {}
